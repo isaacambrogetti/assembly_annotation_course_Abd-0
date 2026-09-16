@@ -9,5 +9,5 @@
 
 cd /data/users/iambrogetti/assembly_annotation_course_Abd-0/data
 
-ln -s /data/courses/assembly-annotation-course/raw_data/Abd-0 ./
-ln -s /data/courses/assembly-annotation-course/raw_data/RNAseq_Sha ./
+ln -s /data/courses/assembly-annotation-course/raw_data/Abd-0/* ./
+ln -s /data/courses/assembly-annotation-course/raw_data/RNAseq_Sha/* ./
