@@ -52,10 +52,10 @@ sh -c '
 cd "$1"
 export MERQURY=/usr/local/share/merqury
 sh "$MERQURY/merqury.sh" \
-reads.k19.meryl \
-"$2" \
+"$2/reads.k19.meryl" \
+"$3" \
 flye_merqury
-' sh "$OUTPUTDIR/flye" "$INPUTDIR/flye/assembly.fasta"
+' sh "$OUTPUTDIR/flye" "$OUTPUTDIR" "$INPUTDIR/flye/assembly.fasta"
 
 
 apptainer exec \
@@ -65,10 +65,10 @@ sh -c '
 cd "$1"
 export MERQURY=/usr/local/share/merqury
 sh "$MERQURY/merqury.sh" \
-reads.k19.meryl \
-"$2" \
+"$2/reads.k19.meryl" \
+"$3" \
 hifiasm_merqury
-' sh "$OUTPUTDIR/hifiasm" "$INPUTDIR/hifiasm/ERR11437323.fa/"
+' sh "$OUTPUTDIR/hifiasm" "$OUTPUTDIR" "$INPUTDIR/hifiasm/ERR11437323.fa"
 
 
 apptainer exec \
@@ -78,7 +78,7 @@ sh -c '
 cd "$1"
 export MERQURY=/usr/local/share/merqury
 sh "$MERQURY/merqury.sh" \
-reads.k19.meryl \
-"$2" \
+"$2/reads.k19.meryl" \
+"$3" \
 lja_merqury
-' sh "$OUTPUTDIR/lja" "$INPUTDIR/lja/ERR11437323.fa/assembly.fasta"
+' sh "$OUTPUTDIR/lja" "$OUTPUTDIR" "$INPUTDIR/lja/ERR11437323.fa/assembly.fasta"
